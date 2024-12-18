@@ -3,11 +3,13 @@ import { StyleSheet} from "react-native";
 
 type Props = {
     imgSource: ImageSource;
+    selectedImage?: String;
 };
 
-const ImageViewer = ({imgSource}: Props) => {
+const ImageViewer = ({imgSource, selectedImage}: Props) => {
+    const imageSource = selectedImage ? selectedImage : imgSource;
     return(
-        <Image source={imgSource} style={styles.image} />
+        <Image source={imageSource} style={styles.image} />
     )
 }
 

@@ -20,7 +20,7 @@ const Button = ({btnLabel, theme, onPress}: Props) => {
   }
     return (
         <View style={Styles.buttonContainer}>
-          <Pressable style ={Styles.button} onPress={()=>{alert("You clicked the btn")}}>
+          <Pressable style ={Styles.button} onPress={onPress}>
             <Text style={Styles.buttonLabel}>{btnLabel}</Text>
         </Pressable>
         </View>
